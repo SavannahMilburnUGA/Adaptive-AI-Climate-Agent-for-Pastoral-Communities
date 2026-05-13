@@ -235,6 +235,27 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Token Limitation Banner */}
+      <div style={{
+        backgroundColor: "var(--color-navy-raised)",
+        borderBottom: `1px solid var(--color-navy-border)`,
+        padding: "12px 32px",
+        display: "flex",
+        alignItems: "center",
+        gap: "32px"
+      }}>
+        <div style={{
+          fontSize: "12px",
+          color: "#fef23f",
+          lineHeight: "1.6",
+          fontWeight: 700, 
+          fontFamily: "var(--font-ranade)",
+          maxWidth: "890px"
+        }}>
+          This prototype uses Groq's free API tier (100,000 tokens/day). If the agent stops responding, the daily limit may have been reached. Please try again later.
+        </div>
+      </div>
+
       {/* Main Layout */}
       <div className="main-layout">
 

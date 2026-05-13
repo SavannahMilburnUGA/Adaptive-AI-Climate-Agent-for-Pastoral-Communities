@@ -3,8 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import axios from "axios";
-
-const API_BASE = "http://localhost:8000";
+// Deploying to Vercel: point to Railway backend URL
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 const STORYLINE_COLORS = {
   "Mediterranean Shift": "#e34948",

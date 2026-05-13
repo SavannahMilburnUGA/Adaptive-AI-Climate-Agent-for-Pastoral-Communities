@@ -21,7 +21,7 @@ Jean-Pierre's belief for the Mediterranean Shift climate future rises from 10% t
 * **Free Energy Principle**: climate content selected to maximally reduce farmer uncertainty given their current belief state
 
 ### Tech Stack
-**Backend**: Python, FastAPI, LangGraph, LangChain, ChromaDB, Mem0, Groq API
+**Backend**: Python, FastAPI, LangGraph, LangChain, ChromaDB, Mem0, Groq API <br>
 **Frontend**: React, Next.js, Axios
 > [!WARNING]
 > This prototype uses Groq's free API tier (100,000 tokens/day). If the agent stops responding, the daily limit may have been reached. Please try again later. 

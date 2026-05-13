@@ -1,14 +1,27 @@
-# Adaptive AI Climate Agent 
-## Expanding UGA VIPR Research: Co-Created, High-Resolution Climate Scenario Narratives for Transhumant Pastoral Communities
-An AI agent that models a farmer's belief state about their climate future + adaptively selects & frames PCS-inspired climate data to update that belief & improve understanding of projected climate/weather scenarios & its real-world impacts regarding decision making for livestock + farming management, cheese production, haymaking, water supply, etc. in Soule, France. 
-* Grounded in Bayesian brain theory (Knill & Pouget, 2004)
-* Explores the Free Energy Principle (Friston, 2010)
-* Implements episodic-semantic memory architectures (SYNAPSE)
-* Expands Generative Agents memory (Park et al., 2023)
-* Uses ReAct reasoning loop (Yao et al., 2023)
+# Adaptive AI Climate Agent for Pastoral Communities
+** Expanding research I was lucky to be a part of on Dr. Tom Mote's WeatherRisk VIPR team @ The University of Georgia. 
+## The Problem
+Farming communities in the French Basque Pyrenees make critical decisions based on understanding seasonal climate patterns such as when to move livestock, how to manage pastures, and how to optimize production. Climate scientists traditionally produce technical projections for farmers & stakeholders every year; however, these projections are not understandable or useful for the people who need them most. 
+## The Solution
+This prototype is a full-stack AI agent that models what a specific farmer believes about their future climate and adaptively selects & delivers physical climate storyline-inspired narratives co-produced between UGA's WeatherRisk VIPR team and French pastoralists in order to update that belief. Implementation was guided by Bayesian brain theory and the Free Energy Principle from computational neuroscience. 
 
-Implementation details:
-1) LangGraph used for the AI agent framework
-2) Groq Llama 3.3 70B used as LLM backbone
-3) Mem0 for persistent memory
-4) FastAPI
+Furthermore, instead of every farmer receiving the same climate information in the same order with the same framing, this AI climate agent tracks distinct belief states & chooses the proper climate narrative for the right farmer at the right moment in order to properly model real belief change. 
+## Example
+A skeptical farmer, Jean-Pierre, is assigned a 65% probability that the climate will not change. Say that Jean-Pierre messages the AI agent: 
+> I remember 2022 being a very dry and difficult summer for grazing. 
+The AI agent will recognize 2022 as the correct temporal analog for the Mediterranean Shift climate future (derived from VIPR research), retrieve experiential-register content referencing that year, & deliver it to Jean-Pierre. 
+
+Jean-Pierre's belief for the Mediterranean Shift climate future rises from 10% to 17%, connecting an abstract climate future to an experience that Jean-Pierre actually lived through. The AI agent remembers this exchange & the next session will build on this persistent memory. 
+
+## How It Works
+* **RAG knowledge base**: 20 climate content chunks in ChromaDB from VIPR, retrieved by semantic similarity + re-ranked by belief-weighted informativeness
+* **Probabilistic belief model**: farmer belief vector updates after every exhcange using heuristic Bayesian updating
+* **ReAct agent loop**: LangGraph implements retrieve, rank, reason, respond, update belief for every message
+* **Cross-session memory**: Mem0 stores key facts about each farmer across separate conversations
+* **Free Energy Principle**: climate content selected to maximally reduce farmer uncertainty given their current belief state
+
+### Tech Stack
+** Backend: Python, FastAPI, LangGraph, LangChain, ChromaDB, Mem0, Groq API
+** Frontend: React, Next.js, Axios
+[!WARNING]
+This prototype uses Groq's free API tier (100,000 tokens/day). If the agent stops responding, the daily limit may have been reached. Please try again later. 

@@ -1,7 +1,8 @@
 # Adaptive AI Climate Agent for Pastoral Communities
+![Flock of sheep descending from the Soula Valley in the Pyrenees](/frontend/public/Pyrenees_Transhumance.avif)
 **Expanding research I was lucky to be a part of on Dr. Tom Mote's WeatherRisk VIPR team @ The University of Georgia.**
 ## The Problem
-Farming communities in the French Basque Pyrenees make critical decisions based on understanding seasonal climate patterns such as when to move livestock, how to manage pastures, and how to optimize production. Climate scientists traditionally produce technical projections for farmers & stakeholders every year; however, these projections are not understandable or useful for the people who need them most. 
+Farming communities in the French Basque Pyrenees make critical decisions based on understanding seasonal climate patterns such as when to move livestock and how to manage pastures & optimize production. Climate scientists traditionally produce technical projections for farmers & stakeholders every year; however, these projections are not understandable or useful for the people who need them most. 
 ## The Solution
 This prototype is a full-stack AI agent that models what a specific farmer believes about their future climate and adaptively selects & delivers physical climate storyline-inspired narratives co-produced between UGA's WeatherRisk VIPR team and French pastoralists in order to update that belief. Implementation was guided by Bayesian brain theory and the Free Energy Principle from computational neuroscience. 
 

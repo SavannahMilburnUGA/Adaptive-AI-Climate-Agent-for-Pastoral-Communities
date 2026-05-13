@@ -1,5 +1,5 @@
 # Adaptive AI Climate Agent for Pastoral Communities
-** Expanding research I was lucky to be a part of on Dr. Tom Mote's WeatherRisk VIPR team @ The University of Georgia. 
+**Expanding research I was lucky to be a part of on Dr. Tom Mote's WeatherRisk VIPR team @ The University of Georgia.**
 ## The Problem
 Farming communities in the French Basque Pyrenees make critical decisions based on understanding seasonal climate patterns such as when to move livestock, how to manage pastures, and how to optimize production. Climate scientists traditionally produce technical projections for farmers & stakeholders every year; however, these projections are not understandable or useful for the people who need them most. 
 ## The Solution
@@ -21,7 +21,7 @@ Jean-Pierre's belief for the Mediterranean Shift climate future rises from 10% t
 * **Free Energy Principle**: climate content selected to maximally reduce farmer uncertainty given their current belief state
 
 ### Tech Stack
-** Backend: Python, FastAPI, LangGraph, LangChain, ChromaDB, Mem0, Groq API
-** Frontend: React, Next.js, Axios
-[!WARNING]
-This prototype uses Groq's free API tier (100,000 tokens/day). If the agent stops responding, the daily limit may have been reached. Please try again later. 
+**Backend**: Python, FastAPI, LangGraph, LangChain, ChromaDB, Mem0, Groq API
+**Frontend**: React, Next.js, Axios
+> [!WARNING]
+> This prototype uses Groq's free API tier (100,000 tokens/day). If the agent stops responding, the daily limit may have been reached. Please try again later. 

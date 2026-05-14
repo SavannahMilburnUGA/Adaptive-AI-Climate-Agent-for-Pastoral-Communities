@@ -4,7 +4,8 @@
 ## The Problem
 Farming communities in the French Basque Pyrenees make critical decisions based on understanding seasonal climate patterns such as when to move livestock and how to manage pastures & optimize production. Climate scientists traditionally produce technical projections for farmers & stakeholders every year; however, these projections are not understandable or useful for the people who need them most. 
 ## The Solution
-This prototype is a full-stack AI agent that models what a specific farmer believes about their future climate and adaptively selects & delivers physical climate storyline-inspired narratives co-produced between UGA's WeatherRisk VIPR team and French pastoralists in order to update that belief. Implementation was guided by Bayesian brain theory and the Free Energy Principle from computational neuroscience. 
+This prototype is a full-stack AI agent that models what a specific farmer believes about their future climate and adaptively selects & delivers 
+[physical climate storyline](https://doi.org/10.1007/s10584-018-2317-9)-inspired narratives co-produced between UGA's WeatherRisk VIPR team and French pastoralists in order to update that belief. Implementation was guided by [Bayesian brain theory](https://doi.org/10.1016/j.tins.2004.10.007) and the [Free Energy Principle](https://doi.org/10.1038/nrn2787) from computational neuroscience. 
 
 Furthermore, instead of every farmer receiving the same climate information in the same order with the same framing, this AI climate agent tracks distinct belief states & chooses the proper climate narrative for the right farmer at the right moment in order to properly model real belief change. 
 ## Example
@@ -17,7 +18,7 @@ Jean-Pierre's belief for the Mediterranean Shift climate future rises from 10% t
 ## How It Works
 * **RAG knowledge base**: 20 climate content chunks in ChromaDB from VIPR, retrieved by semantic similarity + re-ranked by belief-weighted informativeness
 * **Probabilistic belief model**: farmer belief vector updates after every exhcange using heuristic Bayesian updating
-* **ReAct agent loop**: LangGraph implements retrieve, rank, reason, respond, update belief for every message
+* **[ReAct](https://doi.org/10.48550/arXiv.2210.03629) agent loop**: LangGraph implements retrieve, rank, reason, respond, update belief for every message
 * **Cross-session memory**: Mem0 stores key facts about each farmer across separate conversations
 * **Free Energy Principle**: climate content selected to maximally reduce farmer uncertainty given their current belief state
 
